@@ -205,18 +205,22 @@
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 55vw;
+    grid-template-rows: auto;
   }
   .hero__text {
     padding-top: 7rem;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
     justify-content: flex-start;
+    min-height: 100svh;
   }
-  .hero__visual { min-height: 55vw; }
-  .hero__image-overlay {
-    background: linear-gradient(to bottom, var(--c-bg) 0%, transparent 20%);
-  }
+  /* Hide image entirely on mobile — replaced by solid bg with subtle gradient */
+  .hero__visual { display: none; }
   .hero__quote, .hero__scroll { display: none; }
+
+  /* Compensate visually with a soft sage tint on the text bg */
+  .hero {
+    background: linear-gradient(160deg, var(--c-bg) 70%, rgba(168, 196, 169, 0.15) 100%);
+  }
 }
 
 @media (max-width: 480px) {

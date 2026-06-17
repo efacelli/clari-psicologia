@@ -49,8 +49,22 @@
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
   transition: transform 0.6s var(--ease-out), filter 0.4s ease;
   filter: saturate(0.9) brightness(0.97);
+}
+
+/* Prevent stretching: enforce consistent aspect ratios on mobile */
+@media (max-width: 900px) {
+  .gallery__item-img {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery__item-img {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .gallery__item:hover .gallery__item-img {
