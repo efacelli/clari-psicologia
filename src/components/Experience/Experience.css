@@ -1,0 +1,114 @@
+.experience {
+  background: var(--c-bg);
+  padding-block: var(--space-section);
+}
+
+.experience__header {
+  max-width: 640px;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.experience__title {
+  font-family: var(--f-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--c-forest);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.experience__lead {
+  font-size: var(--text-base);
+  color: var(--c-stone);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* Timeline */
+.experience__timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--c-sage-light), transparent);
+}
+
+.experience__item {
+  position: relative;
+  padding-bottom: 2.75rem;
+  padding-left: 2.25rem;
+}
+
+.experience__item:last-child {
+  padding-bottom: 0;
+}
+
+.experience__item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c-sage);
+  border: 2px solid var(--c-bg);
+  box-shadow: 0 0 0 1px var(--c-sage-light);
+}
+
+.experience__year {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-sage);
+  margin-bottom: 0.4rem;
+}
+
+.experience__role {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--c-forest);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.experience__org {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--c-stone-light);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+
+.experience__desc {
+  font-size: 0.875rem;
+  color: var(--c-stone);
+  line-height: 1.7;
+  font-weight: 300;
+  max-width: 560px;
+}
+
+@media (max-width: 680px) {
+  .experience__timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience__item {
+    padding-left: 1.75rem;
+  }
+
+  .experience__item::before {
+    left: -1.5rem;
+  }
+}
